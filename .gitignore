@@ -1,0 +1,10 @@
+.claude
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Datos: los Excel crudos y el CSV consolidado pesan demasiado para git
+# (el consolidado supera el límite de 100MB de GitHub). Se generan con
+# src/ingesta.py a partir de los archivos que se coloquen en data/raw/.
+data/raw/
+data/processed/
