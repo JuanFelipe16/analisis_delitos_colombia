@@ -153,3 +153,11 @@ def cargar_consolidado(forzar_reconstruccion: bool = False) -> pd.DataFrame:
             return pd.read_csv(CONSOLIDADO_PATH, parse_dates=["FECHA_HECHO"])
 
     return construir_consolidado()
+
+
+if __name__ == "__main__":
+    # Ejecutar una sola vez con `python -m src.ingesta` (desde la raíz del
+    # proyecto) para generar/actualizar data/processed/delitos_consolidado.csv
+    # antes de abrir el notebook del portafolio.
+    resultado = construir_consolidado()
+    print(f"Consolidado generado: {CONSOLIDADO_PATH} ({len(resultado)} filas)")
