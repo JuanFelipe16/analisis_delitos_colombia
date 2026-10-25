@@ -6,3 +6,6 @@ openpyxl
 dash
 jupyter-dash
 plotly
+scikit-learn
+statsmodels
+joblib

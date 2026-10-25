@@ -1,0 +1,33 @@
+{
+  "modelo_seleccionado": "3. Boosting Poisson",
+  "corte": "2026-07",
+  "series": 193,
+  "meses": 79,
+  "anios_backtest": [
+    2023,
+    2024,
+    2025
+  ],
+  "mejor_wape": 0.07641541343512537,
+  "alpha_binomial_negativa": 0.05159425184831291,
+  "aic_poisson": 192503.32486473193,
+  "aic_binomial_negativa": 109784.3936743951,
+  "cierre_nacional_anterior": 244872,
+  "cierre_nacional_pronosticado": 272688.39896564424,
+  "cierre_nacional_inf": 267947.10442368995,
+  "cierre_nacional_sup": 300895.1919903793,
+  "error_nacional_resto_backtest": {
+    "2023": 0.2604,
+    "2024": 0.0733,
+    "2025": -0.0438
+  },
+  "parametros_modelo_final": {
+    "l2_regularization": 1.0,
+    "learning_rate": 0.05,
+    "max_depth": 3,
+    "max_iter": 200,
+    "min_samples_leaf": 60
+  },
+  "semilla": 42,
+  "criterio_seleccion": "Menor WAPE del cierre anual en backtest con corte en julio (2023-2025)"
+}
