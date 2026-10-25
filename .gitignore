@@ -8,3 +8,5 @@ __pycache__/
 # src/ingesta.py a partir de los archivos que se coloquen en data/raw/.
 data/raw/
 data/processed/
+# Imágenes temporales que genera crear_informe.py
+tmp/

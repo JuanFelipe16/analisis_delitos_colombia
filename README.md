@@ -12,6 +12,8 @@ src/ingesta.py                 Lectura y consolidación de los Excel crudos
 src/agregar.py                 Agregación mensual (departamento x delito x mes)
 entrenar_modelo.py             Backtest, comparación de modelos y pronóstico final
 app.py                         Dashboard Dash
+crear_notebook.py              Genera notebooks/02_analisis_modelo.ipynb
+crear_informe.py               Genera INFORME_PROYECTO.pdf
 assets/style.css               Estilos del dashboard
 data/delitos_mensual.csv       Datos agregados que usan el modelo y el dashboard
 data/diccionario_datos.csv     Diccionario de datos
@@ -19,7 +21,8 @@ data/geo/                      Geojson de departamentos
 outputs/                       Métricas, backtest, pronósticos y coeficientes
 models/                        Modelo seleccionado
 tests/test_pipeline.py         Pruebas de integridad
-notebooks/                     Portafolio de visualizaciones y prototipo inicial
+notebooks/                     Portafolio, análisis del modelo y prototipo inicial
+INFORME_PROYECTO.pdf           Informe del proceso y decisiones
 CASO_ESTUDIO.md                Formulación completa del caso
 GUIA_ENTREGA.md                Correspondencia con los entregables
 ENLACES.txt                    Enlaces de GitHub y Binder
@@ -46,6 +49,8 @@ Los Excel originales (unos 270 MB) y el consolidado (458 MB) no se suben a GitHu
 python -m src.ingesta        # consolida los Excel -> data/processed/delitos_consolidado.csv
 python -m src.agregar        # agrega por mes -> data/delitos_mensual.csv
 python entrenar_modelo.py    # backtest y pronóstico -> outputs/ y models/ (unos 3 minutos)
+python crear_notebook.py     # notebook de análisis (luego ejecutarlo en Jupyter)
+python crear_informe.py      # informe PDF
 python app.py
 ```
 
@@ -58,6 +63,8 @@ pytest -q
 ## Binder
 
 El enlace de `ENLACES.txt` abre el dashboard en Binder. `binder/start` lanza `app.py` en segundo plano y Jupyter lo expone en `/proxy/8050/` mediante `jupyter-server-proxy`. La primera vez que se construye la imagen puede tardar varios minutos.
+
+Como existe la carpeta `binder/`, Binder solo lee la configuración de ahí: si se cambia `requirements.txt`, hay que copiarlo también a `binder/requirements.txt`.
 
 ## Reproducibilidad
 
