@@ -1,0 +1,10 @@
+ENLACES DE ENTREGA
+==================
+
+Repositorio GitHub:
+https://github.com/JuanFelipe16/analisis_delitos_colombia
+
+Dashboard en Binder:
+https://mybinder.org/v2/gh/JuanFelipe16/analisis_delitos_colombia/HEAD?urlpath=proxy/8050/
+
+Nota: la primera apertura en Binder construye el entorno y puede tardar varios minutos.

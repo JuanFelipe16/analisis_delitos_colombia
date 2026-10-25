@@ -1,6 +1,7 @@
 """Dashboard interactivo del pronóstico de cierre 2026 de delitos de alto impacto social."""
 from pathlib import Path
 import json
+import os
 
 import numpy as np
 import pandas as pd
@@ -44,7 +45,12 @@ def nombre_geo(depto):
     return _GEO_POR_NOMBRE.get(_ALIAS_GEO.get(clave, clave))
 
 
-app = Dash(__name__, title="Pronostico de cierre 2026", suppress_callback_exceptions=True)
+# En Binder el dashboard se abre por jupyter-server-proxy (/user/<id>/proxy/8050/);
+# Dash debe pedir sus recursos con ese prefijo o la página queda en blanco.
+_PREFIJO_BINDER = os.environ.get("JUPYTERHUB_SERVICE_PREFIX")
+_RUTAS = {"requests_pathname_prefix": f"{_PREFIJO_BINDER}proxy/8050/", "routes_pathname_prefix": "/"} if _PREFIJO_BINDER else {}
+
+app = Dash(__name__, title="Pronostico de cierre 2026", suppress_callback_exceptions=True, **_RUTAS)
 server = app.server
 
 
