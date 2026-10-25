@@ -1,2 +1,6 @@
 binder/start text eol=lf
 *.sh text eol=lf
+*.pdf binary
+*.joblib binary
+*.png binary
+*.xlsx binary
