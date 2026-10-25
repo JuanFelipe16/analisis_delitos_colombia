@@ -1,0 +1,8 @@
+variable,descripcion,tipo,rango_o_categorias
+departamento,Departamento donde ocurrió el hecho (Bogotá separado de Cundinamarca),Categórica,33 departamentos
+delito,Tipo de delito de alto impacto social,Categórica,"Violencia intrafamiliar, Amenaza, Delitos sexuales, Homicidio, Extorsión, Secuestro"
+anio,Año del hecho,Entera,2020 a 2026
+mes,Mes del hecho,Entera,1 a 12 (2026: 1 a 7)
+genero,Género de la persona asociada al caso,Categórica,"FEMENINO, MASCULINO, NO REPORTA"
+grupo_edad,Grupo de edad de la persona,Categórica,"DE 0 A 14 AÑOS, DE 14 A 17 AÑOS, DE 18 AÑOS Y MÁS, NO REPORTA"
+casos,Número de casos registrados por la Policía Nacional,Entera,>= 1

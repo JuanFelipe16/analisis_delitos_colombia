@@ -9,6 +9,26 @@ PROCESSED_DIR = BASE_DIR / "data" / "processed"
 
 CONSOLIDADO_PATH = PROCESSED_DIR / "delitos_consolidado.csv"
 
+# A diferencia del consolidado (458 MB, fuera de git), la agregación mensual
+# pesa unos pocos MB y sí se versiona: es la que usan el modelo y el dashboard.
+MENSUAL_PATH = BASE_DIR / "data" / "delitos_mensual.csv"
+DICCIONARIO_PATH = BASE_DIR / "data" / "diccionario_datos.csv"
+
+# Último mes completo de 2026. Agosto 2026 viene en el archivo pero con
+# sub-registro (las denuncias tardías aún no se cargan), así que no se usa.
+CORTE_ANIO = 2026
+CORTE_MES = 7
+
+# Nombres cortos para gráficos y tablas.
+NOMBRE_CORTO_DELITO = {
+    "Otros actos dirigidos a inducir miedo o angustia emocional (Violencia intrafamiliar)": "Violencia intrafamiliar",
+    "Amenaza": "Amenaza",
+    "Violación (Delitos sexuales)": "Delitos sexuales",
+    "Homicidio intencional": "Homicidio",
+    "Extorsión": "Extorsión",
+    "Retención ilegal (Secuestro)": "Secuestro",
+}
+
 # Cualquier .xlsx en RAW_DELITOS_DIR cuyo nombre contenga esta palabra
 # (sin distinguir mayúsculas) se toma como fuente de delitos.
 KEYWORD_ARCHIVO = "DELITOS"
