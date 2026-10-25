@@ -242,7 +242,7 @@ def update_panorama(deptos, delitos, generos, edades, anios):
 def update_model(version):
     template = "plotly_white"
     best = MODELS.iloc[0]
-    cells = [("Ganador", best.version[3:].replace("Boosting ", "")), ("WAPE cierre", f"{best.wape:.1%}"), ("MAE por serie", f"{best.mae_cierre:,.0f}"),
+    cells = [("Ganador", best.version[3:]), ("WAPE cierre", f"{best.wape:.1%}"), ("MAE por serie", f"{best.mae_cierre:,.0f}"),
              ("Error nacional", f"{best.error_nacional_pct:.1%}"), ("Series", f"{SUMMARY['series']}")]
     strip = [html.Div([html.Span(k), html.Strong(v)]) for k, v in cells]
 
